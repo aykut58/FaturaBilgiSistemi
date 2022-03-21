@@ -1,0 +1,24 @@
+﻿@using proje.Entity;
+@model List<musteri_tanim_table>
+@{
+    ViewBag.Title = "Index";
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Unvan</th>
+        <th> Detay </th>
+    </tr>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>@item.ID</td>
+            <td>@item.UNVAN</td>
+            <td> <a class="btn btn-primary" href="/Fatura/Index?musteriId=@item.ID"> Detay </a> </td>
+        </tr>
+        }
+    </tbody>
+</table>
